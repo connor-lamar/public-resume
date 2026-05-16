@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C. Lamar Coleman Resume</title>
+  <style>
+    :root {
+      --page: #10283f;
+      --page-soft: #14324d;
+      --text: #f0dfb7;
+      --heading: #f2ca76;
+      --muted: #d4bd8d;
+      --rule: rgba(242, 202, 118, 0.34);
+      --shadow: rgba(2, 10, 18, 0.36);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--page);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 34rem),
+        linear-gradient(180deg, var(--page-soft), var(--page));
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 1.22;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .resume {
+      width: min(100%, 8.5in);
+      min-height: 11in;
+      margin: 0 auto;
+      padding: 0.46in 0.62in 0.58in;
+      background: var(--page);
+      box-shadow: 0 24px 60px var(--shadow);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 0.12in;
+    }
+
+    h1 {
+      margin: 0 0 0.03in;
+      color: var(--text);
+      font-size: 21px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .contact {
+      margin: 0 0 0.03in;
+      color: var(--muted);
+      font-size: 9.5px;
+      line-height: 1.15;
+    }
+
+    .tagline {
+      margin: 0;
+      color: var(--heading);
+      font-size: 10.5px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    section {
+      margin-top: 0.16in;
+    }
+
+    h2 {
+      margin: 0 0 0.05in;
+      padding-bottom: 0.025in;
+      border-bottom: 1px solid var(--rule);
+      color: var(--heading);
+      font-size: 10px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .summary,
+    .strengths,
+    .education p,
+    .licenses p {
+      font-size: 10.2px;
+      line-height: 1.26;
+    }
+
+    .role {
+      margin-top: 0.055in;
+    }
+
+    .role:first-of-type {
+      margin-top: 0;
+    }
+
+    .role-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.18in;
+      margin: 0;
+      color: var(--text);
+      font-size: 10.4px;
+      line-height: 1.12;
+      font-weight: 800;
+    }
+
+    .date {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 9.3px;
+      font-weight: 500;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    ul {
+      margin: 0.018in 0 0 0.12in;
+      padding: 0;
+      list-style-position: outside;
+    }
+
+    li {
+      margin: 0 0 0.018in;
+      padding-left: 0.03in;
+      font-size: 10px;
+      line-height: 1.18;
+    }
+
+    li::marker {
+      color: var(--heading);
+      font-size: 0.82em;
+    }
+
+    .education p + p {
+      margin-top: 0.1in;
+    }
+
+    .licenses {
+      margin-top: 0.14in;
+    }
+
+    @media (min-width: 721px) {
+      .resume {
+        padding-left: 1.08in;
+        padding-right: 1.08in;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 13px;
+        background: var(--page);
+      }
+
+      .resume {
+        width: 100%;
+        min-height: 100vh;
+        padding: 28px 22px 36px;
+        box-shadow: none;
+      }
+
+      header {
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        font-size: 24px;
+        line-height: 1.08;
+      }
+
+      .contact,
+      .tagline {
+        font-size: 12.5px;
+      }
+
+      section {
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 12px;
+        margin-bottom: 7px;
+        padding-bottom: 4px;
+      }
+
+      .summary,
+      .strengths,
+      .education p,
+      .licenses p {
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .role {
+        margin-top: 13px;
+      }
+
+      .role-heading {
+        display: block;
+        font-size: 13px;
+        line-height: 1.25;
+      }
+
+      .date {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+        text-align: left;
+      }
+
+      ul {
+        margin-top: 4px;
+        margin-left: 18px;
+      }
+
+      li {
+        margin-bottom: 3px;
+        padding-left: 3px;
+        font-size: 12.7px;
+        line-height: 1.32;
+      }
+
+      .education p + p {
+        margin-top: 12px;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--page);
+      }
+
+      .resume {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 0;
+        box-shadow: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume" aria-label="Resume for C. Lamar Coleman">
+    <header>
+      <h1>C. Lamar Coleman</h1>
+      <p class="tagline">Fintech Customer Experience, Trust &amp; Safety, and Operations Leader</p>
+    </header>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Professional Summary</h2>
+      <p class="summary">Fintech operations leader with 7+ years of experience hyper-scaling customer experience, trust and safety, identity, and brokerage operations in regulated environments. Known for improving high-volume support outcomes, leading BPO vendor performance, managing sensitive fraud escalations, and building durable workflows across rapidly changing operational teams.</p>
+    </section>
+
+    <section aria-labelledby="strengths-heading">
+      <h2 id="strengths-heading">Core Strengths</h2>
+      <p class="strengths">CX Operations Leadership | BPO Vendor Management | Fraud &amp; Trust Support | Executive Escalations | KYC &amp; Identity Operations | Brokerage Operations | Workforce Transitions | Customer Communications | Process Improvement</p>
+    </section>
+
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <article class="role">
+        <p class="role-heading"><span>Senior Manager, Customer Experience Operations - Robinhood</span><span class="date">Jan 2024 - Present</span></p>
+        <ul>
+          <li>Direct process and staffing management for approximately 60% of all Robinhood customer experience volume.</li>
+          <li>Own performance outcomes for BPO vendor staff, setting expectations and driving accountability across outsourced support operations.</li>
+          <li>Raised resolution rate and customer satisfaction to record levels for Robinhood.</li>
+          <li>Created a custom response workflow that reduced C-team social escalation response time by 12+ hours.</li>
+          <li>Improved ASAT by 15%+ across crypto and general support inquiries.</li>
+          <li>Optimized AI responses to improve self-solve support rate</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <p class="role-heading"><span>Senior Manager, Customer Trust and Safety Support - Robinhood</span><span class="date">May 2023 - Jan 2024</span></p>
+        <ul>
+          <li>Led customer-facing fraud support staff across sensitive investigations, balancing risk controls, customer experience, and resolution quality.</li>
+          <li>Managed C-team escalations for users involved in sensitive fraud investigations.</li>
+          <li>Project managed all tooling for investigations to customer communications</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <p class="role-heading"><span>Senior Detection and Prevention Specialist - Robinhood</span><span class="date">Oct 2022 - May 2023</span></p>
+        <ul>
+          <li>Developed fraud prevention strategies for targeted incidents and emerging risk patterns.</li>
+          <li>Owned real-time management of targeted fraud incidents, coordinating operational response during active fraud events.</li>
+          <li>Owned security strategy for major money movements such as wire transfers</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <p class="role-heading"><span>Manager, Product Operations, Identity - Robinhood</span><span class="date">Apr 2022 - Sep 2022</span></p>
+        <ul>
+          <li>Launched initiatives across restrictions, customer system access, and know your customer (KYC) processes.</li>
+          <li>Led customer communications for key information updates and identity-related matters.</li>
+          <li>Ensured regulatory compliance with the handling of sensitive customer information</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <p class="role-heading"><span>Brokerage Operations Manager - Titan</span><span class="date">Sep 2021 - Apr 2022</span></p>
+        <ul>
+          <li>Led trading and clearing reconciliation efforts across daily brokerage operations.</li>
+          <li>Managed customer-facing issues tied to crypto liquidity within an actively managed portfolio.</li>
+          <li>Oversaw daily operational tasks for money movement, trade corrections, and account opening.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <p class="role-heading"><span>Account Operations Program Manager - Robinhood</span><span class="date">Sep 2020 - Sep 2021</span></p>
+        <ul>
+          <li>Led teams through 5x staffing transitions while maintaining continuity across account operations workflows.</li>
+          <li>Managed maintenance of ongoing customer identification systems.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <p class="role-heading"><span>Learning Delivery Specialist - Robinhood</span><span class="date">Sep 2019 - Aug 2020</span></p>
+        <ul>
+          <li>Developed Robinhood's first comprehensive CX training curriculum.</li>
+          <li>Trained new agents from beginner to expert on complex topics such as options</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <p class="role-heading"><span>Customer Experience Associate - Robinhood</span><span class="date">Dec 2018 - Aug 2019</span></p>
+      </article>
+    </section>
+
+    <section class="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <p><strong>Master of Business Administration</strong>, Western Governors University, 2021</p>
+      <p><strong>Bachelor of Arts in Religion and Cultural Studies</strong>, University of Central Florida, 2017</p>
+    </section>
+
+    <section class="licenses" aria-labelledby="licenses-heading">
+      <h2 id="licenses-heading">Brokerage Licenses</h2>
+      <p>Securities Industry Essentials | Series 7 | Series 63 | Series 24 | Series 57 | Series 4 | Series 3 | Series 66</p>
+    </section>
+  </main>
+</body>
+</html>
